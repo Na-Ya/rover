@@ -1,3 +1,4 @@
+/* all body styling */
 body {
   font-family: 'Raleway', sans-serif;
   margin: 0;
@@ -10,6 +11,8 @@ a {
 label {
   display: block;
 }
+
+/* end of all body styling */
 
 /* nav bar styling */
 nav {
@@ -32,6 +35,8 @@ nav a {
   padding: 0.25rem;
   font-size: 1.25rem;
 }
+
+/* end of navbar */
 
 /* login form */
 .form-parent {
@@ -60,3 +65,5 @@ input {
   font-size: 1.25rem;
   border-radius: 3px;
 }
+
+/* end of login form */
