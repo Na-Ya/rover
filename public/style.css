@@ -1,5 +1,6 @@
 body {
-  font-family: sans-serif;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
 }
 
 a {
@@ -10,12 +11,52 @@ label {
   display: block;
 }
 
+/* nav bar styling */
+nav {
+  background-color: #202020;
+}
+.nav-logged-out {
+  display: flex;
+  justify-content: flex-end;
+}
+.nav-logged-in {
+  display: flex;
+  justify-content: space-between;
+}
 nav a {
   display: inline-block;
   margin: 1em;
+  color: white;
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 0.25rem;
+  font-size: 1.25rem;
 }
 
+/* login form */
+.form-parent {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
 form div {
-  margin: 1em;
-  display: inline-block;
+  margin: 0.25rem;
+  /* display: inline-block; */
+}
+.login-signup-form {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.login-signup-form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.login-signup-form button,
+input {
+  font-size: 1.25rem;
+  border-radius: 3px;
 }
