@@ -19,12 +19,7 @@ if (process.env.NODE_ENV === 'test') {
 }
 
 /**
- * In your development environment, you can keep all of your
- * app's secret API keys in a file called `secrets.js`, in your project
- * root. This file is included in the .gitignore - it will NOT be tracked
- * or show up on Github. On your production server, you can add these
- * keys as environment variables, so that they can still be read by the
- * Node process on process.env
+ * In development environment, secret API keys are stored in a gitignored file called `secrets.js`. On your production server, api keys will be added as environment variables, so that they can still be read by the Node process on process.env
  */
 if (process.env.NODE_ENV !== 'production') require('../secrets');
 
@@ -54,7 +49,7 @@ const createApp = () => {
   // session middleware with passport
   app.use(
     session({
-      secret: process.env.SESSION_SECRET || 'my best friend is Cody',
+      secret: process.env.SESSION_SECRET || 'Extra extra secret',
       store: sessionStore,
       resave: false,
       saveUninitialized: false,
@@ -96,7 +91,7 @@ const createApp = () => {
 
 const startListening = () => {
   // start listening (and create a 'server' object representing our server)
-  const server = app.listen(PORT, () => console.log(`Mixing it up on port ${PORT}`));
+  const server = app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
 
   // set up our socket control center
   const io = socketio(server);
