@@ -26,7 +26,7 @@ class Routes extends Component {
             <Route path="/home" component={UserHome} />
           </Switch>
         )}
-        {/* Displays our Login component as a fallback */}
+        {/* Displays Login component as a fallback/catchall */}
         <Route component={Login} />
       </Switch>
     );
@@ -38,8 +38,7 @@ class Routes extends Component {
  */
 const mapState = state => {
   return {
-    // Being 'logged in' for our purposes will be defined has having a state.user that has a truthy id.
-    // Otherwise, state.user will be an empty object, and state.user.id will be falsey
+    // Being 'logged in' for our purposes will be defined has having a state.user that has a truthy id. Otherwise, undefined would be falsy.
     isLoggedIn: !!state.user.id,
   };
 };
