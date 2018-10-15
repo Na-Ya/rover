@@ -25,7 +25,12 @@ class SingleVet extends Component {
     });
   }
   nextVet() {
-    history.push(`/vets/${this.state.vetProfile.id + 1}`);
+    const nextVetId = Number(this.state.vetProfile.id) + 1;
+    const nextVet = this.props.vets.filter(vet => vet.id === nextVetId);
+    this.setState({
+      vetProfile: nextVet[0],
+    });
+    history.push(`/vets/${nextVetId}`);
   }
   render() {
     const { id, imgUrl, name, specialty } = this.state.vetProfile;

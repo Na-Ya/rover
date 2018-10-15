@@ -16,6 +16,6 @@ I used fullstack academy's NERD stack boilerplate for this project and got mock 
 
 Features implemented: The all vet view is rendering correctly and users can click into a single vet view.
 
-Features that still need work: Users cannot click through to the next vet, The URL is updating correctly but a re-render is not triggering. The root level component is wrapped in withRouter so this will require additional debugging to find the root cause.
+Features that still need work: Users can click to the next vet right now but it is hardcoded to always be the current id + 1. This would need to have more logic to make sure the button is not available if there isn't a next vet.
 
 One thing I would add would be to fetch a single vet's data on the single vet page. This way we would not have to filter on the front end through a list of all vets.
