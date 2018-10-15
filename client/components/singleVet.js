@@ -10,12 +10,21 @@ class SingleVet extends Component {
   componentDidMount() {
     const currentVetId = Number(this.props.match.params.id);
     const currentVet = this.props.vets.filter(vet => vet.id === currentVetId);
+    console.log(currentVet[0]);
     this.setState({
-      vetProfile: currentVet,
+      vetProfile: currentVet[0],
     });
   }
   render() {
-    return <div> placeholder {this.state.vetProfile.name} </div>;
+    return this.state.vetProfile.id ? (
+      <div key={this.state.vetProfile.id}>
+        <img src={this.state.vetProfile.imgUrl} />
+        <p>Name: {this.state.vetProfile.name}</p>
+        <p>Specialties: {this.state.vetProfile.specialty.join(' , ')}</p>
+      </div>
+    ) : (
+      'Loading'
+    );
   }
 }
 
