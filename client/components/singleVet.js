@@ -14,7 +14,9 @@ class SingleVet extends Component {
       vetProfile: currentVet,
     });
   }
-  render() {}
+  render() {
+    return <div> placeholder {this.state.vetProfile.name} </div>;
+  }
 }
 
 const mapState = state => {
