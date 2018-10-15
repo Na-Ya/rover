@@ -16,11 +16,13 @@ class SingleVet extends Component {
     });
   }
   render() {
-    return this.state.vetProfile.id ? (
-      <div key={this.state.vetProfile.id}>
-        <img src={this.state.vetProfile.imgUrl} />
-        <p>Name: {this.state.vetProfile.name}</p>
-        <p>Specialties: {this.state.vetProfile.specialty.join(' , ')}</p>
+    const { id, imgUrl, name, specialty } = this.state.vetProfile;
+    return id ? (
+      <div key={id}>
+        <img src={imgUrl} />
+        <p>Name: {name}</p>
+        <p>Specialties: {specialty.join(' , ')}</p>
+        <Link to={`/vets/${id + 1}`}> Next Vet </Link>
       </div>
     ) : (
       'Loading'
