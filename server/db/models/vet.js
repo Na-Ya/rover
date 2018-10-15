@@ -17,6 +17,13 @@ const Vet = db.define('vet', {
     type: Sequelize.ARRAY(Sequelize.STRING),
     defaultValue: [],
   },
+  imgUrl: {
+    type: Sequelize.STRING,
+    defaultValue: 'https://via.placeholder.com/300x300',
+    validate: {
+      isUrl: true,
+    },
+  },
 });
 
 module.exports = Vet;
