@@ -23,8 +23,8 @@ class Routes extends Component {
         {/* Routes placed here are available to all visitors */}
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
-        <Route path="/vets" component={allVets} />
-        <Route patch="/vets/:id" component={singleVet} />
+        <Route exact path="/vets" component={allVets} />
+        <Route exact path="/vets/:id" component={singleVet} />
         {isLoggedIn && (
           <Switch>
             {/* Routes placed here are only available after logging in */}
