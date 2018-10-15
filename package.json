@@ -1,7 +1,7 @@
 {
-  "name": "boilerplate",
+  "name": "rover",
   "version": "1.0.0",
-  "description": "NERDS Boilerplate",
+  "description": "rover challenge",
   "engines": {
     "node": ">= 7.0.0"
   },
