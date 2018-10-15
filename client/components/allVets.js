@@ -13,6 +13,7 @@ class AllVets extends Component {
           <img src={singleVet.imgUrl} />
           <p>Name: {singleVet.name}</p>
           <p>Specialties: {singleVet.specialty.join(' , ')}</p>
+          <Link to={`/vets/${singleVet.id}`}> View Vet Profile</Link>
         </div>
       );
     });
