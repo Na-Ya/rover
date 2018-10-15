@@ -19,7 +19,6 @@ class SingleVet extends Component {
   componentDidMount() {
     const currentVetId = Number(this.props.match.params.id);
     const currentVet = this.props.vets.filter(vet => vet.id === currentVetId);
-    console.log(currentVet[0]);
     this.setState({
       vetProfile: currentVet[0],
     });
