@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter, Route, Switch } from 'react-router-dom';
-import { Login, Signup, UserHome } from './components';
+import { Login, Signup, UserHome, AllVets } from './components';
 import { me, fetchVets } from './store';
+import allVets from './components/allVets';
 
 /**
  * COMPONENT
@@ -21,6 +22,7 @@ class Routes extends Component {
         {/* Routes placed here are available to all visitors */}
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
+        <Route path="/vets" component={allVets} />
         {isLoggedIn && (
           <Switch>
             {/* Routes placed here are only available after logging in */}
