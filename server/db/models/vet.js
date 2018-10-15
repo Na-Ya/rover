@@ -15,6 +15,7 @@ const Vet = db.define('vet', {
   },
   specialty: {
     type: Sequelize.ARRAY(Sequelize.STRING),
+    defaultValue: [],
   },
 });
 
