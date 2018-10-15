@@ -10,3 +10,13 @@ router.get('/', async (req, res, next) => {
     next(err);
   }
 });
+
+router.get('/:id', async (req, res, next) => {
+  try {
+    const vetId = Number(req.params.id);
+    const singleVet = await Vet.findById(vetId);
+    res.send(singleVet);
+  } catch (err) {
+    next(err);
+  }
+});
