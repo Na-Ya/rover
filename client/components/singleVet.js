@@ -15,6 +15,7 @@ class SingleVet extends Component {
         specialty: [],
       },
     };
+    this.nextVet = this.nextVet.bind(this);
   }
   componentDidMount() {
     const currentVetId = Number(this.props.match.params.id);
@@ -22,7 +23,6 @@ class SingleVet extends Component {
     this.setState({
       vetProfile: currentVet[0],
     });
-    this.nextVet = this.nextVet.bind(this);
   }
   nextVet() {
     history.push(`/vets/${this.state.vetProfile.id + 1}`);
