@@ -3,9 +3,9 @@ import createLogger from 'redux-logger';
 import thunkMiddleware from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import user from './user';
-import vet from './vets';
+import vets from './vets';
 
-const reducer = combineReducers({ user, vet }); // Add all subreducers here
+const reducer = combineReducers({ user, vets }); // Add all subreducers here
 const middleware = composeWithDevTools(
   // Gives us excellent debugging tools for redux
   applyMiddleware(thunkMiddleware, createLogger({ collapsed: true }))
